@@ -8,6 +8,8 @@ Since it only shows once per day for me, it will be hard to test the patch. Unti
 
 # Download
 
+https://github.com/AndnixSH/Android-Emulator-Notification-Killer/releases
+
 Note: This app requires administrator rights in order to patch the emulators
 
 Any such report from your antivirus is a false positive and is due to how the application works. You must manually add the exe to your antivirus's whitelist/exclusion list. If you have security concerns, simply do not use the app. Instead, patch manually by hand using Hex editor.
