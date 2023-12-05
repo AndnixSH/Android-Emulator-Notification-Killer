@@ -10,4 +10,4 @@ Any such report from your antivirus is a false positive and is due to how the ap
 
 # Preview
 
-preview.mp4
+https://github.com/AndnixSH/Android-Emulator-Notification-Killer/assets/40742924/4507e04e-f6e7-4bfe-9463-68c7608b1f73
