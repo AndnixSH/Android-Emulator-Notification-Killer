@@ -4,7 +4,7 @@ After Nox and LDPlayer developers ignored my hundreds of feedbacks to add the da
 
 ### What about ads inside running Emulator?
 
-Just enable root and use [AdAway app](https://github.com/AdAway/AdAway/releases) in root mode. AdAway can block ads on all apps
+Just use [AdAway app](https://github.com/AdAway/AdAway/releases). If you use root, use root mode in AdAway for better experience so you don't have to use VPN mode
 
 # Download
 
