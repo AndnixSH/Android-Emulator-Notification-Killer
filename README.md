@@ -2,6 +2,10 @@
 
 After Nox and LDPlayer developers ignored my hundreds of feedbacks to add the damn option to disable annoying installation notification, I have decided to develop a tool by my own to disable the notification by patching the executeable. It can also patch Nox ads popup to prevent it from showing ads. It patches dnplayer.exe for all LDPlayer version, and Nox.exe, Qt5Widgets.dll, MultiPlayerManager.exe and for all Nox versions.
 
+### What about ads inside running Emulator?
+
+Just enable root and use [AdAway app](https://github.com/AdAway/AdAway/releases) in root mode. AdAway can block ads on all apps
+
 # Download
 
 https://github.com/AndnixSH/Android-Emulator-Notification-Killer/releases
