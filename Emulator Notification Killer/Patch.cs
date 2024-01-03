@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SaveToGameWpf.Logic
+namespace EmuPatcher
 {
     internal class Patch
     {

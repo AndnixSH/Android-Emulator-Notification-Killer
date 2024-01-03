@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Emulator_Notification_Killer
+namespace EmuPatcher
 {
     internal static class Program
     {

@@ -1,4 +1,4 @@
-﻿namespace Emulator_Notification_Killer
+﻿namespace EmuPatcher
 {
     partial class Form1
     {
@@ -256,7 +256,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 354);
+            this.ClientSize = new System.Drawing.Size(851, 354);
             this.Controls.Add(this.ld9Path);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.ld9Patch);
@@ -280,6 +280,8 @@
             this.Controls.Add(this.patchNoxPlayer);
             this.Controls.Add(this.selNoxPath);
             this.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Android Emulator Notification Killer";
             this.ResumeLayout(false);
