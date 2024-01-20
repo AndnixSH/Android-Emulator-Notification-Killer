@@ -12,7 +12,7 @@ https://github.com/AndnixSH/Android-Emulator-Notification-Killer/releases
 
 Note: This app requires administrator rights in order to patch the emulators
 
-Any such report from your antivirus is a false positive and is due to how the application works. You must manually add the exe to your antivirus's whitelist/exclusion list. If you have security concerns, simply do not use the app. You can compile the source by yourself, or patch the file manually by hand using Hex editor.
+Your antivirus will flag it as HackTool.Patcher or other, because it is indeed a patching tool. You must manually add the exe to your antivirus's whitelist/exclusion list. If you have security concerns, simply do not use the app. You can compile the source by yourself, or patch the file manually by hand using Hex editor.
 
 # Preview
 
