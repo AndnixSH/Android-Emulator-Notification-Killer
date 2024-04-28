@@ -4,7 +4,7 @@ After Nox and LDPlayer developers ignored my hundreds of feedbacks to add the da
 
 ### What about ads inside running Emulator?
 
-Just use [AdAway app](https://github.com/AdAway/AdAway/releases). If you use root, use root mode in AdAway for better experience so you don't have to use VPN mode
+Just use [AdAway app](https://github.com/AdAway/AdAway/releases). It's better if you use root so you don't have to use VPN mode
 
 # Download
 
@@ -12,7 +12,7 @@ https://github.com/AndnixSH/Android-Emulator-Notification-Killer/releases
 
 Note: This app requires administrator rights in order to patch the emulators
 
-Any such report from your antivirus is a false positive and is due to how the application works. You must manually add the exe to your antivirus's whitelist/exclusion list. If you have security concerns, simply do not use the app. Instead, patch manually by hand using Hex editor.
+This tool will be flagged as HackTool.Patcher or similar, because it is indeed a patching tool. You must manually add the exe to your antivirus's whitelist/exclusion list. If you have security concerns, simply do not use the app. You can check the source, see how it patches and patch the file manually by hand using Hex editor.
 
 # Preview
 

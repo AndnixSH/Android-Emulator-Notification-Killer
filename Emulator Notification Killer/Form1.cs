@@ -29,7 +29,7 @@ namespace EmuPatcher
         public static string LD4Backup = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "LD5Bak");
         public static string LD64Backup = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "LD564Bak");
         public static string LD9Backup = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "LD9Bak");
-     
+
         public void GetInstalledApps()
         {
             string uninstallKey = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall";
@@ -218,12 +218,16 @@ namespace EmuPatcher
                 Directory.CreateDirectory(bakPath);
 
                 string bakExePath = Path.Combine(bakPath, "dnplayer.exe");
-
                 string dnExePath = Path.Combine(ldPath, "dnplayer.exe");
-                bool p1 = Patch.PatternExists(dnExePath, "51 8B 8B ?? ?? 00 00 50 56 E8 ?? ?? 01 00");
-                bool p2 = Patch.PatternExists(dnExePath, "50 8B ?? E8 ?? ?? 00 00 83 7C 24");
-                bool p3 = Patch.PatternExists(dnExePath, "8B ?? 50 E8 ?? ?? 00 00 83 7C 24 38 08");
-                if (p1 && p2 && p3)
+
+                string p1 = "51 8B ?? ?? ?? 00 00 50 ?? E8 ?? ?? 01 00";
+                string p2 = "50 8B ?? E8 ?? ?? 00 00 83 7C 24";
+                string p3 = "8B ?? 50 E8 ?? ?? 00 00 83 7C 24 38 08";
+
+                bool b1 = Patch.PatternExists(dnExePath, p1);
+                bool b2 = Patch.PatternExists(dnExePath, p2);
+                bool b3 = Patch.PatternExists(dnExePath, p3);
+                if (b1 && b2 && b3)
                 {
                     Log("Created backup on " + bakPath);
                     File.Copy(dnExePath, bakExePath, true);
@@ -234,9 +238,9 @@ namespace EmuPatcher
                     return;
                 }
 
-                Patch.PatchFile(dnExePath, "51 8B 8B ?? ?? 00 00 50 56 E8 ?? ?? 01 00", "90 90 90 90 90 90 90 90 90 90 90 90 90 90");
-                Patch.PatchFile(dnExePath, "50 8B ?? E8 ?? ?? 00 00 83 7C 24", "90 90 90 90 90 90 90 90");
-                Patch.PatchFile(dnExePath, "8B ?? 50 E8 ?? ?? 00 00 83 7C 24 38 08", "90 90 90 90 90 90 90 90"); // 2 occurrences
+                Patch.PatchFile(dnExePath, p1, "90 90 90 90 90 90 90 90 90 90 90 90 90 90");
+                Patch.PatchFile(dnExePath, p2, "90 90 90 90 90 90 90 90");
+                Patch.PatchFile(dnExePath, p3, "90 90 90 90 90 90 90 90"); // 2 occurrences
 
                 Log("Patched dnplayer.exe");
             }
