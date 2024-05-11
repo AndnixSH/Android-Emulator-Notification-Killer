@@ -123,21 +123,21 @@ namespace EmuPatcher
                 string noxBakPath = Path.Combine(NoxBackup, "Nox.exe");
                 string noxMultiBakPath = Path.Combine(NoxBackup, "MultiPlayerManager.exe");
 
-                string patch1 = "55 57 56 53 89 CE 83 EC 1C 8B 41 04 8B 58 08 8B";
-                string patch2 = "89 34 24 89 D9 E8 58 ?? FE FF 83 EC 04";
+                string qt5Patch = "55 57 56 53 89 CE 83 EC 1C 8B 41 04 8B 58 08 8B";
+                string noxPatch = "89 34 24 89 D9 E8 ?? ?? FE FF 83 EC 04";
 
-                bool p1 = Patch.PatternExists(noxQt5Path, patch1);
-                bool p2 = Patch.PatternExists(noxPath, patch2);
+                bool p1 = Patch.PatternExists(noxQt5Path, qt5Patch);
+                bool p2 = Patch.PatternExists(noxPath, noxPatch);
                 if (p1 && p2)
                 {
                     Log("Created backup on " + noxQt5BakPath);
                     File.Copy(noxQt5Path, noxQt5BakPath, true);
                     File.Copy(noxPath, noxBakPath, true);
 
-                    if (Patch.PatchFile(noxQt5Path, patch1, "B8 01 00 00 00 C3"))
+                    if (Patch.PatchFile(noxQt5Path, qt5Patch, "B8 01 00 00 00 C3"))
                         Log("Patched Qt5Widgets.dll");
 
-                    if (Patch.PatchFile(noxPath, patch2, "90 90 90 90 90 90 90 90 90 90 90 90 90"))
+                    if (Patch.PatchFile(noxPath, noxPatch, "90 90 90 90 90 90 90 90 90 90 90 90 90"))
                         Log("Patched Nox.exe");
                 }
                 else
