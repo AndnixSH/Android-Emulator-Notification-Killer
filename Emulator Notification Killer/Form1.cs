@@ -220,7 +220,7 @@ namespace EmuPatcher
                 string bakExePath = Path.Combine(bakPath, "dnplayer.exe");
                 string dnExePath = Path.Combine(ldPath, "dnplayer.exe");
 
-                string p1 = "51 8B ?? ?? ?? 00 00 50 ?? E8 ?? ?? 01 00";
+                string p1 = "51 8B ?? ?? ?? 00 00 50 ?? E8 ?? ?? ?? ??";
                 string p2 = "50 8B ?? E8 ?? ?? 00 00 83 7C 24";
                 string p3 = "8B ?? 50 E8 ?? ?? 00 00 83 7C 24 38 08";
 
